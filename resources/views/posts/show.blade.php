@@ -209,6 +209,18 @@ h1, h2, h3, h4, h5, h6 {
             <p>
                 <?php echo($post->body) ?>
             </p>
+
+            <h1>التعليقات</h1>
+            <?php foreach ($post->comments as $comment): ?>
+            <h4>
+                   <?php echo($comment->name) ?>
+            </h4>
+
+            <p>
+              <?php echo($comment->body) ?>
+            </p>
+            <?php endforeach?>
+
         </div>
 
         <nav class="blog-pagination">

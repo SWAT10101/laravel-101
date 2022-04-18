@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
+use App\Models\Post;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,7 +40,7 @@ Route::get('/posts', function(){
 });
 
 Route::get('/posts/{id}', function($id){
-    $post = DB::table('posts')->find($id);
+    $post = Post::findOrFail($id);
     return view('posts.show', compact('post'));
 
 });

@@ -13,7 +13,7 @@ class Post extends Model
    protected $fillable = ['title', 'body', 'author'];
 
    public function comments(){
-     return $this->hasMany(Comments::class);
+     return $this->hasMany(Comment::class);
    }
 
 }
