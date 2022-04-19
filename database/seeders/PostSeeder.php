@@ -16,6 +16,6 @@ class PostSeeder extends Seeder
      */
     public function run()
     {
-        Post::factory()->count(20)->hasComments(3, ['approved' => true])->create();
+        Post::factory()->count(20)->hasComments(3, ['approved' => false])->create();
     }
 }

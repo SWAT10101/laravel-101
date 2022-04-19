@@ -211,7 +211,7 @@ h1, h2, h3, h4, h5, h6 {
             </p>
 
             <h1>التعليقات</h1>
-            <?php foreach ($post->comments as $comment): ?>
+            <?php foreach ($comments as $comment): ?>
             <h4>
                    <?php echo($comment->name) ?>
             </h4>
