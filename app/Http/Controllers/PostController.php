@@ -53,7 +53,8 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        return view('posts.show', compact('post'));
+        $comments = $post->comments()->where('post_id', $post->id)->where('approved', 1)->get();
+        return view('posts.show', compact('post', 'comments'));
     }
 
     /**
